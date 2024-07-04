@@ -1,10 +1,11 @@
-import Allroutes from "./allroutes"
+// import Allroutes from "./allroutes"
+import Home from "./pages/home"
 
 
 function App() {
   return (
     <>
-    <Allroutes />
+    <Home />
     </>
   )
 }
