@@ -1,15 +1,27 @@
 .main{
+    height: 100vh;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 4;
+    /* mix-blend-mode: difference; */
+
+    transition-duration: 200ms;
+    position: relative;
+}
+
+.main:hover{
+    flex: 5;
 }
 
 .main > h1 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 4vw;
     width: 20vw;
     margin: 5px;
+    z-index: 1;
 }
 
 .main > h6 {
@@ -18,25 +30,47 @@
     font-size: 2vw;
     font-weight:100;
     margin: 0px;
+    z-index: 1;
 } 
 
-#mainsec1{
-    height: 100vh;
-    width: 25vw;
+
+#mainsec1::after{
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    content: '';
     background-image: linear-gradient(#C31AFF , #8400B2);
+    mix-blend-mode: difference;
+    z-index: 0;
+    top: 0;    
 }
-#mainsec2{
-    height: 100vh;
-    width: 25vw;
+#mainsec2::after{
+    height: inherit;
+    width: 100%;
     background-image: linear-gradient(#FFC700 , #D03E00);
+    position: absolute;
+    content: '';
+    mix-blend-mode: difference;
+    z-index: 0;
+    top: 0;
 }
-#mainsec3{
-    height: 100vh;
-    width: 25vw;
+#mainsec3::after{
+    height: inherit;
+    width: 100%;
     background-image: linear-gradient(#0085FF , #0028B6);
+    position: absolute;
+    content: '';
+    mix-blend-mode: difference;
+    z-index: 0;
+    top: 0;
 }
-#mainsec4{
-    height: 100vh;
-    width: 25vw;
+#mainsec4::after{
+    height: inherit;
+    width: 100%;
     background-image: linear-gradient(#64E300 , #00AF07);
+    position: absolute;
+    content: '';
+    mix-blend-mode: difference;
+    z-index: 0;
+    top: 0;
 }
