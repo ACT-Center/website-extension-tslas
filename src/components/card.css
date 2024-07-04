@@ -1,21 +1,41 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.main > h1 {
+    color: white;
+    font-size: 4vw;
+    width: 20vw;
+    margin: 5px;
+}
 
-.mainsec1{
+.main > h6 {
+    width: 20vw;
+    color: white;
+    font-size: 2vw;
+    font-weight:100;
+    margin: 0px;
+} 
+
+#mainsec1{
     height: 100vh;
     width: 25vw;
     background-image: linear-gradient(#C31AFF , #8400B2);
 }
-.mainsec2{
+#mainsec2{
     height: 100vh;
     width: 25vw;
     background-image: linear-gradient(#FFC700 , #D03E00);
 }
-.mainsec3{
+#mainsec3{
     height: 100vh;
     width: 25vw;
     background-image: linear-gradient(#0085FF , #0028B6);
 }
-.mainsec4{
+#mainsec4{
     height: 100vh;
     width: 25vw;
     background-image: linear-gradient(#64E300 , #00AF07);
