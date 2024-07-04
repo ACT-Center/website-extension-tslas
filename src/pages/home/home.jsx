@@ -1,5 +1,5 @@
 import Card from "../../components/card/card";
-
+import './home.css'; 
 export default function Home() {
 
     console.log("home");
