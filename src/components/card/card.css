@@ -103,3 +103,8 @@
     background-size: cover;
     background-position: center;
 }
+
+a{
+    color: inherit;
+    text-decoration: none;
+}

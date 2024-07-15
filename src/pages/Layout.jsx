@@ -1,14 +1,11 @@
 import { Outlet } from "react-router-dom";
-import Card from "../components/card/card";
-
 import "./Layout.css"
+import SideCard from "../components/SideCard/SideCard";
 
 export default function Layout() {
   return (
     <div className="layout">
-        <div className="sideBar">
-          <Card id="card1" heading="Reasearch Projects" title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. "/>
-        </div>
+        <SideCard/>
         <div className="content">
           <Outlet/>
         </div>

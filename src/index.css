@@ -2,9 +2,9 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'inter', sans-serif;
 }
 
 .home{
   display: flex;
-  font-family: 'inter', sans-serif;
 }

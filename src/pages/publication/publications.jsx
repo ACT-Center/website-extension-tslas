@@ -1,25 +1,65 @@
-import Card from "../../components/card/card";
+import data from './data';
 import './publications.css'
 
 export default function Publications()
 {
+    let pubs = data;
+
     return (
-        <div style={{display : "flex"}}>
-         <div className="mainsec1"><Card section="mainsec2" heading="Reasearch Projects" title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. "/></div>
-         <div className="publications">
-        <div className="heading">
-        Publications and Papers
+        <>
+        <h1>Papers & Publications</h1>
+        <div className="publications">
+
+            <div className="publicationYear">
+                <h3>2024</h3>
+                {
+                    pubs[2024].map((pub, index) => (
+                        <Publication pub={pub} ind={index} />
+                    ))
+                }
+            </div>
+
+            <div className="publicationYear">
+                <h3>2023</h3>
+                {
+                    pubs[2023].map((pub, index) => (
+                        <Publication pub={pub} ind={index} />
+                    ))
+                }
+            </div>
+
+            <div className="publicationYear">
+                <h3>2022</h3>
+                {
+                    pubs[2022].map((pub, index) => (
+                        <Publication pub={pub} ind={index} />
+                    ))
+                }
+            </div>
+
+            <div className="publicationYear">
+                <h3>2021</h3>
+                {
+                    pubs[2021].map((pub, index) => (
+                        <Publication pub={pub} ind={index} />
+                    ))
+                }
+            </div>
+
         </div>
-        <div className="publicationsyearswise">
-            <div id="1year" className="years">2019</div>
-            <div id="2year" className="years">2019</div>
-            <div id="3year" className="years">2019</div>
-            <div id="4year" className="years">2019</div>
-            <div id="5year" className="years">2019</div>
-            <div id="6year" className="years">2019</div>
-        </div>
-         </div>
-        </div>
+        </>
     );
+
+}
+
+function Publication({pub, index}){
+
+    return(
+        <div className="pub">
+            <h4>{pub.title}</h4>
+            <p>By: {pub.authors}</p>
+            <p>Publication: {pub.journal}, Volume: {pub.volume} </p>
+        </div>
+    )
 
 }

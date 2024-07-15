@@ -11,16 +11,15 @@ export default function Allroutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
 
         <Route path="/section" element={<Layout/>}>
           <Route path="projects" element={<Researchprojects />} />
+          <Route path="workshops" element={<Workshop />} />
+          <Route path="publications" element={<Publications />} />
+          <Route path="talks" element={<Researchtalks />} />
         </Route>
 
-        <Route path="/home" element={<Home />} />
-        <Route path="/workshop" element={<Workshop />} />
-        <Route path="/publication" element={<Publications />} />
-        <Route path="/projects" element={<Researchprojects />} />
-        <Route path="/talks" element={<Researchtalks />} />
         <Route path="*" element={<div>no page route</div>} />
       </Routes>
     </BrowserRouter>

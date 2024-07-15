@@ -1,13 +1,13 @@
 .layout{
+    height: 100vh;
     display: flex;
-}
-
-.sideBar{
-    max-width: 20%;
-    font-family: 'Inter';
+    overflow-y: hidden;
 }
 
 .content{
+    height: 100vh;
+    overflow-y: scroll;
     padding: 20px 50px;
     flex-grow: 1;
+    background-color: aliceblue;
 }
