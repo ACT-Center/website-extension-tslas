@@ -1,0 +1,28 @@
+.publications{
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 20px 50px;
+    justify-content: space-evenly;
+}
+
+.publicationsyearswise{
+/* background-color: blue; */
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+height: 82vh;
+width: 60vw;
+}
+
+.years{
+    height: 18vh;
+    width: 18vw;
+    background-color: #EDEDED;
+    margin-bottom: 2vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
