@@ -1,0 +1,105 @@
+:root{
+    --cardPadding: 30px
+}
+
+.homeCard{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 0px var(--cardPadding);
+    flex: 1;
+    position: relative;
+
+    transition-duration: 200ms;
+
+}
+
+.homeCard:not(:nth-of-type(1)){
+    border-left: 2px solid hsl(207, 96%, 90%);
+}
+
+.homeCard:hover{
+    color: aliceblue;
+}
+
+.homeCard::after{
+    position: absolute;
+    content: '';
+    height: inherit;
+    width: 100%;
+    background-color: aliceblue;
+    z-index: 1;
+    transform: translateX(calc(var(--cardPadding)*-1));
+
+    transition-duration: 200ms;
+}
+
+.homeCard:hover::after{
+
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+
+.homeCard > h1{
+    font-size: 5em;
+    z-index: 2;
+}
+
+.homeCard > h3{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    height: 50px;
+    z-index: 2;
+}
+
+.homeCard > p{
+    height: 100px;
+    z-index: 2;
+}
+
+.homeCard > button{
+
+    width: max-content;
+    font-family: 'Inter';
+    font-weight: 500;
+    border: 2px solid rgb(34, 125, 216);
+    background-color: transparent;
+    padding: 8px 30px;
+    cursor: pointer;
+
+    transition-duration: 100ms;
+    z-index: 2;
+    color: inherit;
+}
+
+.homeCard > button:hover{
+
+    background-color: rgb(34, 125, 216);
+
+}
+
+#card1{
+    background-image: url('../assets/research.jpg');
+    background-size: cover;
+}
+
+#card2{
+    background-image: url('../assets/conference.jpg');
+    background-size: cover;
+}
+
+#card3{
+    background-image: url('../assets/publication.jpg');
+    background-size: cover;
+}
+
+#card4{
+    background-image: url('../assets/talks.jpg');
+    background-size: cover;
+    background-position: center;
+}

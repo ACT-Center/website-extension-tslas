@@ -7,7 +7,7 @@ export default function Layout() {
   return (
     <div className="layout">
         <div className="sideBar">
-          <Card section="mainsec1" heading="Reasearch Projects" title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. "/>
+          <Card id="card1" heading="Reasearch Projects" title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. "/>
         </div>
         <div className="content">
           <Outlet/>

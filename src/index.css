@@ -7,6 +7,4 @@ body{
 .home{
   display: flex;
   font-family: 'inter', sans-serif;
-  background-image: url('./assets/homebg.jpg');
-  background-size: cover;
 }

@@ -3,7 +3,8 @@
 }
 
 .sideBar{
-    max-width: 33%;
+    max-width: 20%;
+    font-family: 'Inter';
 }
 
 .content{
