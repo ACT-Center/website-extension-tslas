@@ -79,7 +79,7 @@ function Publication({ pub }) {
             <p>Funding Agency :- {pub.funding_agency} </p>
             <p> Grant Amount :- {pub.grant_amount}</p>
             <p> Duration :- {pub.duration} </p>
-            <p> Project Description :- {pub.project_description}</p>
+            {pub.project_description == null ? null : <p> Project Description :- {pub.project_description}</p>}
 
         </div>
     )
