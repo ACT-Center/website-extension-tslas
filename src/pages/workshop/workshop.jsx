@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let conferenceDetailsList = [
     {
         facultyName: "Andrea Raimondi (co-organiser)",
@@ -29,12 +30,26 @@ let conferenceDetailsList = [
     }
 ];
 
+=======
+import { useOutletContext } from "react-router-dom";
+import workData from "./data.js";
+import { useEffect } from "react";
+>>>>>>> aa78c7ce99f83c0ab867b3d3a33b5cc8fe010a17
 
 export default function Workshop() {
+
+    let [setTitle, setDesc] = useOutletContext()
+
+    useEffect(() => {
+        setTitle("Workshops & Conferences")
+        setDesc("Access Exclusive, Cutting-Edge Insights: Unlock the Latest Research and Industry Trends to Drive Innovation")
+    }, [])
+
     return (
         <div>
             <div className="projects">
 
+<<<<<<< HEAD
                 <h1>Workshop & Conference Organized</h1>
                 {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> */}
 
@@ -45,12 +60,22 @@ export default function Workshop() {
                         ))
                     }
                 </ol>
+=======
+                <h1>Workshops</h1>
+
+                {
+                    workData.map((work) => (
+                        <Works pub={work}/>
+                    ))
+                }
+>>>>>>> aa78c7ce99f83c0ab867b3d3a33b5cc8fe010a17
 
             </div>
         </div>
     );
 }
 
+<<<<<<< HEAD
 function Publication({ pub }) {
 
     return (
@@ -59,6 +84,17 @@ function Publication({ pub }) {
             <p>Location :- {pub.location} , Date :- {pub.date} </p>
             <p>Details of the conference :- {pub.conference}</p>
             {pub.website == '' ? null : <a href={pub.website} target="blank">Website</a>}
+=======
+
+function Works({pub}){
+
+    return(
+        <div className="pub">
+            <h4>{pub.Title}</h4>
+            <p>By: {pub.FacultyName}</p>
+            <p>{pub.Organizer}, {pub.Location} </p>
+            {/* <p>{pub.Description}</p> */}
+>>>>>>> aa78c7ce99f83c0ab867b3d3a33b5cc8fe010a17
         </div>
     )
 

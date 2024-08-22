@@ -1,9 +1,18 @@
+import { useOutletContext } from 'react-router-dom';
 import data from './data';
 import './publications.css'
+import { useEffect } from 'react';
 
 export default function Publications()
 {
     let pubs = data;
+
+    let [setTitle, setDesc] = useOutletContext()
+
+    useEffect(() => {
+        setTitle("Papers & Publications")
+        setDesc("Join the Conversation: Advance Academic Discourse and Contribute to a Growing Body of Global Knowledge")
+    }, [])
 
     return (
         <>
