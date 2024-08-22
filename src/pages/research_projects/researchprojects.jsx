@@ -1,4 +1,6 @@
+import { useOutletContext } from "react-router-dom";
 import "./projects.css"
+import { useEffect } from "react";
 
 let names = [
     "Prof Santha Kumari",
@@ -52,19 +54,27 @@ let projectDescriptions = [null, null,null,
 ];
 
 export default function Researchprojects() {
+
+    let [setTitle, setDesc] = useOutletContext()
+
+    useEffect(() => {
+        setTitle("Research Projects")
+        setDesc("Empowering the Next Generation of Scientific Leaders: Student-Led Research Projects as a Catalyst for Innovation and Discovery")
+    }, [])
+
+
     return (
         <div className="projects">
 
             <h1>Research Projects</h1>
             {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> */}
 
-            <ol>
-               {
-                names.map((name, index) => (
-                    <li><Publication pub={{facultyname: name, projecttitle: projects[index], funding_agency: fundingAgencies[index], grant_amount: fundingAmounts[index], duration: projectDurations[index] , project_description : projectDescriptions[index]}} /></li>
-                ))
-               }
-            </ol>
+            {
+            names.map((name, index) => (
+                <Publication pub={{facultyname: projects[index], projecttitle: name, funding_agency: fundingAgencies[index], grant_amount: fundingAmounts[index], duration: projectDurations[index] , project_description : projectDescriptions[index]}} />
+            ))
+            }
+
 
         </div>
     );
@@ -75,7 +85,7 @@ function Publication({ pub }) {
     return (
         <div className="pub">
             <h4>{pub.facultyname}</h4>
-            <p>Project Title :- {pub.projecttitle}</p>
+            <p>{pub.projecttitle}</p>
             <p>Funding Agency :- {pub.funding_agency} </p>
             <p> Grant Amount :- {pub.grant_amount}</p>
             <p> Duration :- {pub.duration} </p>

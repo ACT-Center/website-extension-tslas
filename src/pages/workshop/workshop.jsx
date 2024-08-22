@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
+
 let conferenceDetailsList = [
     {
         facultyName: "Andrea Raimondi (co-organiser)",
@@ -31,19 +34,22 @@ let conferenceDetailsList = [
 
 export default function Workshop() {
 
+    let [setTitle, setDesc] = useOutletContext()
+
+    useEffect(() => {
+        setTitle("Workshops & Conferences")
+        setDesc("Access Exclusive, Cutting-Edge Insights: Unlock the Latest Research and Industry Trends to Drive Innovation")
+    }, [])
+
     return (
         <div>
             <div className="projects">
-                <h1>Workshop & Conference Organized</h1>
-                <ol>
-                    {
-                        conferenceDetailsList.map((e, index) => (
-                            <li key={index}>
-                                <Publication pub={{ facultyname: e.facultyName, location: e.location, date: e.date, conference: e.conferenceDetails, website: e.website }} />
-                            </li>
-                        ))
-                    }
-                </ol>
+                <h1>Workshop & Conference</h1>
+                {
+                    conferenceDetailsList.map((e, index) => (
+                        <Publication pub={{ facultyname: e.facultyName, location: e.location, date: e.date, conference: e.conferenceDetails, website: e.website }} />
+                    ))
+                }
             </div>
         </div>
     );
@@ -55,7 +61,7 @@ function Publication({ pub }) {
             <h4>{pub.facultyname}</h4>
             <p>Location: {pub.location} , Date: {pub.date}</p>
             <p>Details of the conference: {pub.conference}</p>
-            {pub.website && <a href={pub.website} target="_blank" rel="noopener noreferrer">Website</a>}
+            {/* {pub.website && <a href={pub.website} target="_blank" rel="noopener noreferrer">Website</a>} */}
         </div>
     );
 }
