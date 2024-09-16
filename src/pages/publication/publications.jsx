@@ -1,11 +1,13 @@
 import { useOutletContext } from 'react-router-dom';
-import data from './data';
+import data from './data.js';
 import './publications.css'
 import { useEffect } from 'react';
 
 export default function Publications()
 {
     let pubs = data;
+    console.log(pubs[2024]);
+    
 
     let [setTitle, setDesc] = useOutletContext()
 
