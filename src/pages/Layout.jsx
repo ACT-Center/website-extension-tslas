@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Layout.css"
 
@@ -6,6 +6,8 @@ export default function Layout() {
   
   let [title, setTitle] = useState("")
   let [desc, setDesc] = useState("")
+
+  const nav = useNavigate();
 
   return (
     <div className="layout">
@@ -16,6 +18,10 @@ export default function Layout() {
 
         <div className="content">
           <Outlet context={[setTitle, setDesc]}/>
+        </div>
+
+        <div className="goback" onClick={() => {nav('/')}}>
+          <div>Go Back</div>
         </div>
 
     </div>

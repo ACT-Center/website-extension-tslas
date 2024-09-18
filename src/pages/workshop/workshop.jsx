@@ -17,7 +17,7 @@ let conferenceDetailsList = [
         website: ""
     },
     {
-        facultyName: "",  // No faculty name provided
+        facultyName: "Dr. Vinay Kumar",
         location: "TIET, Patiala",
         date: "March 27-28, 2014",
         conferenceDetails: "Exploring New Research Avenues: A Conversation among Heterodox Economics Sociology and History.",
@@ -57,7 +57,7 @@ function Publication({ pub }) {
         <div className="pub">
             <h4>{pub.facultyname}</h4>
             <p>Location: {pub.location} , Date: {pub.date}</p>
-            <p>Details of the conference: {pub.conference}</p>
+            <p>{pub.conference}</p>
             {/* {pub.website && <a href={pub.website} target="_blank" rel="noopener noreferrer">Website</a>} */}
         </div>
     );

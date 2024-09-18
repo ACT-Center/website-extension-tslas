@@ -2,15 +2,17 @@ import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
 
 let names = [
+    'Dr. Vinay Kumar',
     "Prof Santha Kumari",
     "Prof Santha Kumari",
-    "Sheikh Adil Edrisi",
-    "Jappen Oberoi",
-    "Jappen Oberoi",
-    "Jappen Oberoi"
+    "Dr. Sheikh Adil Edrisi",
+    "Dr. Jappen Oberoi",
+    "Dr. Jappen Oberoi",
+    "Dr. Jappen Oberoi"
 ];
 
 let projects = [
+    "Research Data for Wesbite 100% B11 Identification of immunogenic peptide for diagnosis of orthohantavirus infection Identification of immunogenic peptide for diagnosis of orthohantavirus infection",
     "An experimental Investigation of the Psychological determinants of Financial decision making: A prospect theory approach, Sponsoring Agency: ICSSR, Duration: 2013-2015, Status: Completed.",
     "Santha Kumari (2019). Factors influencing resilience in children: The mediating role of protective and compensatory factors in coping with adversities. Funding Agency ICSSR (Indian Council of Social Science Research. 8 Lakhs Completed.",
     "Sustainability assessment of urban forestry by managing urban marginal lands for developing green space",
@@ -20,6 +22,7 @@ let projects = [
 ];
 
 let fundingAgencies = [
+    'Department of Science & Technology (DST), Govt. of India and Russian Foundation for Basic Research', 
     "Indian Council of Social Science Research",
     "Indian Council of Social Science Research",
     "Science and Engineering Research Board, Govt. of India (SERB, GoI) New Delhi, India",
@@ -29,6 +32,7 @@ let fundingAgencies = [
 ];
 
 let fundingAmounts = [
+    '87.29 lakhs',
     "7 lakhs",
     "8 lakhs",
     "25.99 lakhs",
@@ -38,6 +42,7 @@ let fundingAmounts = [
 ];
 
 let projectDurations = [
+    '2023-2026',
     "2013-2015",
     "2019-2021",
     "December 2021 - December 2023",
