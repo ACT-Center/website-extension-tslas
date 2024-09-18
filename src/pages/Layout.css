@@ -5,6 +5,7 @@
 .layoutTitle{
     margin-left: 50px;
     padding-top: 50px;
+    font-size: 1em;
 }
 
 .content{
@@ -53,6 +54,30 @@
     color: gray;
     margin-top: 5px;
     font-style: italic;
+}
+
+.goback{
+    position: fixed;
+    padding: 15px 20px;
+
+    background-color: white;
+    border-radius: 100px;
+    bottom: 20px;
+    right: 20px;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition-duration: 200ms;
+}
+
+.goback:hover{
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 1080px) {
