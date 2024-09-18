@@ -42,16 +42,13 @@ export default function Workshop() {
     }, [])
 
     return (
-        <div>
-            <div className="projects">
-                <h1>Workshop & Conference</h1>
+        <>
                 {
                     conferenceDetailsList.map((e, index) => (
                         <Publication pub={{ facultyname: e.facultyName, location: e.location, date: e.date, conference: e.conferenceDetails, website: e.website }} />
                     ))
                 }
-            </div>
-        </div>
+        </>
     );
 }
 

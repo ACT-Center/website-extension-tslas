@@ -1,6 +1,32 @@
-.home{
-    display: flex;
-    font-family: 'inter', sans-serif;
-    background-image: url('../../assets/homebg.jpg');
-    background-size: cover;
+.home {
+  position: relative;
+  background-color: var(--col1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "inter", sans-serif;
+
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home::after{
+
+  content: 'asdf';
+  background-color: var(--col4);
+  position: absolute;
+  z-index: 1;
+
+  right: 0;
+
+  height: 100vh;
+  width: 50%;
+
+}
+
+@media screen and (max-width: 1220px) {
+  .home {
+    flex-direction: column;
+    height: max-content;
   }
+}

@@ -11,19 +11,13 @@ export default function Researchtalks() {
     }, [])
 
     return (
-        <div>
-            <div className="projects">
-
-                <h1>Research Talks</h1>
-
-                {
-                    workData.map((work) => (
-                        <Works pub={work} />
-                    ))
-                }
-
-            </div>
-        </div>
+        <>
+            {
+                workData.map((work) => (
+                    <Works pub={work} />
+                ))
+            }
+        </>
     );
 }
 

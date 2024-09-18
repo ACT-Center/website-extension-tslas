@@ -1,11 +1,12 @@
 import { useOutletContext } from 'react-router-dom';
-import data from './data';
-import './publications.css'
+import data from './data.js';
 import { useEffect } from 'react';
 
 export default function Publications()
 {
     let pubs = data;
+    console.log(pubs[2024]);
+    
 
     let [setTitle, setDesc] = useOutletContext()
 
@@ -16,46 +17,49 @@ export default function Publications()
 
     return (
         <>
-        <h1>Papers & Publications</h1>
-        <div className="publications">
-
             <div className="publicationYear">
                 <h3>2024</h3>
+                <div className="publication">
                 {
                     pubs[2024].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
 
             <div className="publicationYear">
                 <h3>2023</h3>
+                <div className='publication'>
                 {
                     pubs[2023].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
 
             <div className="publicationYear">
                 <h3>2022</h3>
+                <div className='publication'>
                 {
                     pubs[2022].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
 
             <div className="publicationYear">
                 <h3>2021</h3>
+                <div className='publication'>
                 {
                     pubs[2021].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
-
-        </div>
         </>
     );
 
