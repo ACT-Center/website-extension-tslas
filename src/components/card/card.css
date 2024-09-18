@@ -1,9 +1,16 @@
 :root {
   --cardPadding: 0px;
+  --cardRotation: 10deg;
+
+  --col1: #4c0ab2; 
+  --col2: #3e48ff;
+  --col3: #3969E9;
+  --col4: #4BA4FE;
 }
 
 .homeCard {
-  height: 100vh;
+  height: 150vh;
+  z-index: 10;
 
   display: flex;
   flex-direction: column;
@@ -11,72 +18,42 @@
   align-items: center;
 
   color: aliceblue;
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(0, 0, 0);
   padding: 0px var(--cardPadding);
   flex: 1;
   position: relative;
 
   transition-duration: 200ms;
-  
+  cursor: pointer;
+
+  transform: rotateZ( var(--cardRotation) );
   overflow: hidden;
 }
 
-.homeCard::after{
-  
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  
-
-  background-color: black;
-  
-  clip-path: polygon(0 80%, 100% 60%, 100% 100%, 0% 100%);
-  height: 100%;
-  width: 100%;
-  transition-duration: 200ms;
-  
+.homeCard:hover{
+  flex: 1.2;
 }
 
-.homeCard::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  clip-path: polygon(0 0, 100% 0, 100% 17%, 0 37%);
-  height: 100%;
-  width: 100%;
-  transition-duration: 200ms;
+.homeCard > *{
+  transform: rotateZ(calc(var(--cardRotation) * -1));
+} 
+
+#card1{
+  background-color: var(--col1);
 }
 
-/* .homeCard:nth-of-type(1)::after, .homeCard:nth-of-type(1)::before{
-  background-color: #3C71B8;
+#card2{
+  background-color: var(--col2);
 }
 
-.homeCard:nth-of-type(2)::after, .homeCard:nth-of-type(2)::before{
-  background-color: #ffbd16;
+#card3{
+  background-color: var(--col3);
 }
 
-.homeCard:nth-of-type(3)::after, .homeCard:nth-of-type(3)::before{
-  background-color: #0ab14d;
+#card4{
+  background-color: var(--col4);
 }
 
-.homeCard:nth-of-type(4)::after, .homeCard:nth-of-type(4)::before{
-  background-color: #F79428;
-} */
-
-.homeCard:hover::after{
-  transform: scale(1.2) translateY(-50px);
-}
-
-.homeCard:hover::before{
-  transform: scale(1.2) translateY(50px);
-}
-
-/* .homeCard:hover {
-  color: aliceblue;
-} */
 
 .homeCard > h1 {
   font-size: 5em;
@@ -104,14 +81,14 @@
   width: max-content;
   font-family: "Inter";
   font-weight: 500;
-  border: 2px solid rgb(34, 125, 216);
-  background-color: transparent;
+  border: 0px solid rgb(34, 125, 216);
+  background-color: rgb(255, 255, 255);
+  color: black;
   padding: 8px 30px;
   cursor: pointer;
 
   transition-duration: 100ms;
   z-index: 2;
-  color: inherit;
 }
 
 .homeCard > button:hover {
@@ -123,7 +100,23 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1220px) {
+
+  .homeCard{
+    transform: none;
+  }
+
+  .homeCard > *{
+    transform: none;
+  }
+
+  .homeCard {
+    min-height: 50svh;
+    width: 100%;
+    color: white;
+    /* background-color: transparent; */
+  }
+
   #card1 {
     background-image: url("../assets/research.jpg");
     background-size: cover;
@@ -143,22 +136,6 @@ a {
     background-image: url("../assets/talks.jpg");
     background-size: cover;
     background-position: center;
-  }
-
-  .homeCard:nth-of-type(1)::after, .homeCard:nth-of-type(1)::before{
-    background-color: rgb(0, 0, 0, 0.8);
-  }
-  
-  .homeCard:nth-of-type(2)::after, .homeCard:nth-of-type(2)::before{
-    background-color: rgb(0, 0, 0, 0.8);
-  }
-  
-  .homeCard:nth-of-type(3)::after, .homeCard:nth-of-type(3)::before{
-    background-color: rgb(0, 0, 0, 0.8);
-  }
-  
-  .homeCard:nth-of-type(4)::after, .homeCard:nth-of-type(4)::before{
-    background-color: rgb(0, 0, 0, 0.8);
   }
 
 }

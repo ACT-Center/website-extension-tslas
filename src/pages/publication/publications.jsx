@@ -1,6 +1,5 @@
 import { useOutletContext } from 'react-router-dom';
 import data from './data.js';
-import './publications.css'
 import { useEffect } from 'react';
 
 export default function Publications()
@@ -18,9 +17,6 @@ export default function Publications()
 
     return (
         <>
-        <h1>Papers & Publications</h1>
-        <div className="publications">
-
             <div className="publicationYear">
                 <h3>2024</h3>
                 {
@@ -56,8 +52,6 @@ export default function Publications()
                     ))
                 }
             </div>
-
-        </div>
         </>
     );
 

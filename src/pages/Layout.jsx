@@ -10,12 +10,7 @@ export default function Layout() {
 
   return (
     <div className="layout">
-
-        <SideCard 
-          title = {title}
-          desc = {desc}
-        />
-
+        <h1 className="layoutTitle"> {title} </h1>
         <div className="content">
           <Outlet context={[setTitle, setDesc]}/>
         </div>

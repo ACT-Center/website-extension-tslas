@@ -1,5 +1,4 @@
 import { useOutletContext } from "react-router-dom";
-import "./projects.css"
 import { useEffect } from "react";
 
 let names = [
@@ -64,19 +63,13 @@ export default function Researchprojects() {
 
 
     return (
-        <div className="projects">
-
-            <h1>Research Projects</h1>
-            {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> */}
-
+        <>
             {
-            names.map((name, index) => (
-                <Publication pub={{facultyname: projects[index], projecttitle: name, funding_agency: fundingAgencies[index], grant_amount: fundingAmounts[index], duration: projectDurations[index] , project_description : projectDescriptions[index]}} />
-            ))
+                names.map((name, index) => (
+                    <Publication pub={{facultyname: projects[index], projecttitle: name, funding_agency: fundingAgencies[index], grant_amount: fundingAmounts[index], duration: projectDurations[index] , project_description : projectDescriptions[index]}} />
+                ))
             }
-
-
-        </div>
+        </>
     );
 }
 
@@ -90,7 +83,6 @@ function Publication({ pub }) {
             <p> Grant Amount :- {pub.grant_amount}</p>
             <p> Duration :- {pub.duration} </p>
             {pub.project_description == null ? null : <p> Project Description :- {pub.project_description}</p>}
-
         </div>
     )
 
