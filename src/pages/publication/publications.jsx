@@ -19,38 +19,46 @@ export default function Publications()
         <>
             <div className="publicationYear">
                 <h3>2024</h3>
+                <div className="publication">
                 {
                     pubs[2024].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
 
             <div className="publicationYear">
                 <h3>2023</h3>
+                <div className='publication'>
                 {
                     pubs[2023].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
 
             <div className="publicationYear">
                 <h3>2022</h3>
+                <div className='publication'>
                 {
                     pubs[2022].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
 
             <div className="publicationYear">
                 <h3>2021</h3>
+                <div className='publication'>
                 {
                     pubs[2021].map((pub, index) => (
                         <Publication pub={pub} ind={index} />
                     ))
                 }
+                </div>
             </div>
         </>
     );

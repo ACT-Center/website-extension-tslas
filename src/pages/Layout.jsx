@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
-import "./Layout.css"
-import SideCard from "../components/SideCard/SideCard";
 import { useState } from "react";
+import "./Layout.css"
 
 export default function Layout() {
   
@@ -10,7 +9,11 @@ export default function Layout() {
 
   return (
     <div className="layout">
-        <h1 className="layoutTitle"> {title} </h1>
+
+        <div className="layoutTitle">
+          <h1> {title} </h1> 
+        </div>
+
         <div className="content">
           <Outlet context={[setTitle, setDesc]}/>
         </div>
