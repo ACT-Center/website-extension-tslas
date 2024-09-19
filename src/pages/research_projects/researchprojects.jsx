@@ -84,10 +84,10 @@ function Publication({ pub }) {
         <div className="pub">
             <h4>{pub.facultyname}</h4>
             <p>{pub.projecttitle}</p>
-            <p>Funding Agency :- {pub.funding_agency} </p>
-            <p> Grant Amount :- {pub.grant_amount}</p>
-            <p> Duration :- {pub.duration} </p>
-            {pub.project_description == null ? null : <p> Project Description :- {pub.project_description}</p>}
+            <p>Funding Agency : {pub.funding_agency} </p>
+            <p> Grant Amount : {pub.grant_amount}</p>
+            <p> Duration : {pub.duration} </p>
+            {pub.project_description == null ? null : <p> Project Description : {pub.project_description}</p>}
         </div>
     )
 
