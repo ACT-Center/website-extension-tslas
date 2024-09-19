@@ -70,7 +70,7 @@ function Publication({pub, index}){
     return(
         <div className="pub">
             <h4>{pub.title}</h4>
-            <p>By: {pub.authors}</p>
+            <p>By: {pub.authors.join(', ')}</p>
             <p>Publication: {pub.journal}, Volume: {pub.volume} </p>
         </div>
     )
