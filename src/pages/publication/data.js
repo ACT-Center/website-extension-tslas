@@ -2,14 +2,14 @@ const data = {
   2024: [
     {
       authors: ["Manvir Kaur", "Rahul Upadhyay", "Vinay Kumar"],
-      title: "A Hybrid Deep Learning Framework Using Scaling-Basis Chirplet Transform for Motor Imagery EEG Recognition in Brain–Computer Interface Applications",
+      title: "A Hybrid Deep Learning Framework Using Scaling-Basis Chirplet Transform for Motor Imagery EEG Recognition in Brain-Computer Interface Applications",
       journal: "International Journal of Imaging Systems and Technology",
       volume: 2024,
-      pages: "Download",
+      pages: "",
       doi: "https://doi.org/10.1002/ima.23127"
     },
     {
-      authors: ["Mittal", "J.", "Juneja", "K. K.", "Saumya", "S.", "Shukla", "A."],
+      authors: ["A. Mittal", "J. Juneja", "K. K.", "Saumya", "S. Shukla"],
       title: "A matter of time: how musical training affects time perception",
       journal: "Frontiers in Neuroscience",
       volume: 18,
