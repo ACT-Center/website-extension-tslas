@@ -2,7 +2,7 @@ import tslaslogo from '../../assets/tslaslogo.png'
 
 const Navbar = () => {
     return (
-        <div className=" h-20 text-white flex justify-between items-center p-5">
+        <div className=" border-t-2 select-none h-20 text-white flex justify-between items-center p-5">
             <img src={tslaslogo} alt="Tslas Logo" className=' ml-5 h-9 w-auto' />
             <div className=' flex h-20 items-center'>
                 <div className=" mr-12 text-2xl font-normal">HOME</div>
