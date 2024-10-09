@@ -1,16 +1,20 @@
-import Card from "../../components/card/card";
-import './home.css'; 
-export default function Home() {
+import Navbar from "../../components/navbar/Navbar";
+import tslas from "../../assets/tslas.jpg"
 
-    console.log("home");
-    let i = 1;
-
-    return (
-        <div className="home">
-            <Card num={i++} id="card1" link={'./section/projects'} heading="Research Projects"/>
-            <Card num={i++} id="card2" link={'./section/workshops'} heading="Workshops & Conferences"/>
-            <Card num={i++} id="card3" link={'./section/publications'} heading="Publications"/>
-            <Card num={i++} id="card4" link={'./section/talks'} heading="Research Talks"/>
+const Home = () => {
+  return (
+    <div className=" h-screen bg-slate-900 flex-col justify-between">
+     <div className=" h-1/5"> <Navbar /></div>
+      <div className="  w-full h-4/5 flex">
+        <div className=" h-full w-1/2 ">
+        
         </div>
-    );
-}
+        <div className=" h-full w-1/2 flex items-end justify-center">
+        <img src={tslas} alt="Background" className=" h-full w-full pr-14 pt-5"/>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
