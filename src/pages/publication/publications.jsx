@@ -1,73 +1,76 @@
-import { useOutletContext } from 'react-router-dom';
-import data from './data.js';
-import { useEffect } from 'react';
+import { useNavigate, useOutletContext } from "react-router-dom";
+import "./publications.css"
+import { Client, Databases } from "appwrite";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 
-export default function Publications()
-{
-    let pubs = data;
-    console.log(pubs[2024]);
+export default function Publications() {
     
+    let [setTitle, setDesc] = useOutletContext();
+    setTitle('Publications')
 
-    let [setTitle, setDesc] = useOutletContext()
+    const client = new Client()
+        .setEndpoint("https://cloud.appwrite.io/v1")
+        .setProject("6706e315001949143d10")
 
-    useEffect(() => {
-        setTitle("Papers & Publications")
-        setDesc("Join the Conversation: Advance Academic Discourse and Contribute to a Growing Body of Global Knowledge")
-    }, [])
+    const databases = new Databases(client);
+
+    let teachers = useQuery({
+        queryKey: ['Teachers'],
+        queryFn: async function fetcher(){
+
+            let promise = await databases.listDocuments(
+                "6706e36200146facdec1",
+                "6706e372002b99485a37",
+                []
+            )
+
+            return promise
+
+        },
+        refetchOnMount: false,
+        refetchOnWindowFocus: false
+    })
+
+
+    if(teachers.isLoading || teachers.isFetching){
+        return(
+            <></>
+        )
+    }
 
     return (
-        <>
-            <div className="publicationYear">
-                <h3>2024</h3>
-                <div className="publication">
-                {
-                    pubs[2024].map((pub, index) => (
-                        <Publication pub={pub} ind={index} />
-                    ))
-                }
-                </div>
-            </div>
-
-            <div className="publicationYear">
-                <h3>2023</h3>
-                <div className='publication'>
-                {
-                    pubs[2023].map((pub, index) => (
-                        <Publication pub={pub} ind={index} />
-                    ))
-                }
-                </div>
-            </div>
-
-            <div className="publicationYear">
-                <h3>2022</h3>
-                <div className='publication'>
-                {
-                    pubs[2022].map((pub, index) => (
-                        <Publication pub={pub} ind={index} />
-                    ))
-                }
-                </div>
-            </div>
-
-            <div className="publicationYear">
-                <h3>2021</h3>
-                <div className='publication'>
-                {
-                    pubs[2021].map((pub, index) => (
-                        <Publication pub={pub} ind={index} />
-                    ))
-                }
-                </div>
-            </div>
-        </>
+        <div className="publications">
+            {
+                teachers.data.documents.map((teacher) => (
+                    <TeacherCard id={teacher.ID} name={teacher.Name}/>
+                ))
+            }
+        </div>
     );
 
 }
 
-function Publication({pub, index}){
 
-    return(
+function TeacherCard({id, name}) {
+
+    const navigator = useNavigate()
+    function clickHandler(){
+        navigator('./' + id, {state: {name, id}})
+    }
+
+    return (
+        <div className='teacherCard' onClick={clickHandler}>
+            <div className="teacherCardImg">
+
+            </div>
+            <p className="teacherCardName">{name}</p>
+        </div>
+    );
+}
+
+function Publication({ pub, index }) {
+
+    return (
         <div className="pub">
             <h4>{pub.title}</h4>
             <p>By: {pub.authors.join(', ')}</p>

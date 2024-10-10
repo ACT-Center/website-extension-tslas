@@ -5,6 +5,7 @@ import Publications from "./pages/publication/publications";
 import Researchprojects from "./pages/research_projects/researchprojects";
 import Researchtalks from "./pages/research_talks/researchtalks";
 import Layout from "./pages/Layout";
+import Teacherpubs from "./pages/publication/teacherpubs";
 
 export default function Allroutes() {
   return (
@@ -17,6 +18,7 @@ export default function Allroutes() {
           <Route path="projects" element={<Researchprojects />} />
           <Route path="workshops" element={<Workshop />} />
           <Route path="publications" element={<Publications />} />
+          <Route path="publications/:id" element={<Teacherpubs />} />
           <Route path="talks" element={<Researchtalks />} />
         </Route>
 

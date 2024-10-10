@@ -1,0 +1,28 @@
+.teacherName{
+
+    font-size: 2em;
+
+}
+
+.teacherSubHead{
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.teacherSubHead:nth-of-type(2){
+    margin-top: 50px;
+}
+
+.teacherPaper{
+    background-color: lightgrey;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+    border-bottom: 2px rgb(0, 110, 255) solid;
+    transition-duration: 100ms;
+    
+}
+
+.teacherPaper:hover{
+    border-bottom: 5px rgb(255, 0, 76) solid;
+}

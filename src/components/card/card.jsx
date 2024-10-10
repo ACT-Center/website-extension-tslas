@@ -45,7 +45,7 @@ const StyledWrapper = styled.div`
 }
 
 .container .box {
-  width: 11.875em;
+  width: 13.875em;
   height: 15.875em;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.074);
