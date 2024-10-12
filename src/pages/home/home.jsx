@@ -1,23 +1,34 @@
 import Navbar from "../../components/navbar/Navbar";
-import tslas from "../../assets/tslas.jpg"
+import tslas from "../../assets/admissionhome.jpg"
 import Card from "../../components/card/card";
 
 const Home = () => {
   return (
-    <div className=" bg-gradient-to-r from-slate-950 to-slate-800 select-none h-screen flex-col justify-between">
-     <div className=" h-1/5"> <Navbar /> </div>
-      <div className=" w-full h-4/5 flex">
-        <div className=" h-full w-1/2 flex flex-wrap justify-center select-none pt-5">
-        <div className="h-1/6 w-1/4 mr-10 ml-10"><Card /></div>
-        <div className="h-1/6 w-1/4 mr-10 ml-10"><Card /></div>
-        <div className="h-1/6 w-1/4 mr-10 ml-10 mt-10"><Card /></div>
-        <div className="h-1/6 w-1/4 mr-10 ml-10 mt-10"><Card /></div>
+    <div className="bg-gradient-to-r from-white to-neutral-400 select-none h-screen flex flex-col">
+      <div className="bg-orange-500 h-auto">
+        <Navbar />
+      </div>
+      <div className=" w-full flex flex-1 justify-end items-center">  
+        <div className=" p-4 mr-10 backdrop-blur-sm bg-white/30 w-1/3 absolute flex flex-wrap rounded-xl select-none items-center">
+          <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3">
+            <Card />
+          </div>
+          <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3 ">
+            <Card />
+          </div>
+          <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3">
+            <Card />
+          </div>
+          <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3 ">
+            <Card />
+          </div>
         </div>
-        <div className=" h-full w-1/2 flex items-end justify-center">
-        <img src={tslas} alt="Background" className=" h-full w-full pt-5 pr-16"/>
+        <div className=" h-full w-full">
+          <img src={tslas} alt="Background" className="h-full w-full object-cover" />
         </div>
       </div>
     </div>
+
   );
 };
 
