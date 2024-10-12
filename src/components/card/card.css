@@ -3,8 +3,8 @@
     position: relative;
     font-family: sans-serif;
   }
-  
-  .container .box {
+
+  .container .box{
     width: 13.875em;
     height: 15.875em;
     padding: 1rem;
@@ -12,16 +12,11 @@
     border-radius: 0.7rem;
     transition: all ease 0.5s;
   }
-  
-  .box:hover{
-    width: 15.875em;
-    height: 17.875em;
-  }
+
 
   .container .box .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 0.1em;
   }
   
- 

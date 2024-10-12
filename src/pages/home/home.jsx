@@ -8,19 +8,19 @@ const Home = () => {
       <div className="bg-orange-500 h-auto">
         <Navbar />
       </div>
-      <div className=" w-full flex flex-1 justify-end items-center">  
-        <div className=" p-4 mr-10 backdrop-blur-sm bg-white/30 w-1/3 absolute flex flex-wrap rounded-xl select-none items-center">
+      <div className=" w-full flex flex-1 justify-start items-center">  
+        <div className=" p-4 ml-10 backdrop-blur-sm bg-white/30 w-1/3 absolute flex flex-wrap rounded-xl select-none items-center">
           <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3">
-            <Card />
+            <Card title="PUBLICATIONS" url="https://www.ripublication.com/images/Journal-Banner.jpg"/>
           </div>
           <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3 ">
-            <Card />
+            <Card title="PROJECTS" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ55dfozxP5M45HEObEdL6kgkD2MWuzu8BgrQ&s"/>
           </div>
           <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3">
-            <Card />
+            <Card title="WORKSHOPS" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRFzr-gQX7TH3opIAhH4DKQUZ6jxEkY1fStA&s"/>
           </div>
           <div className="h-1/6 w-2/5 mr-5 ml-5 mt-3 mb-3 ">
-            <Card />
+            <Card title="TALKS" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcyqDeHW9UA7HqhBLJ6YOECaWvHXLETBOoA&s"/>
           </div>
         </div>
         <div className=" h-full w-full">
