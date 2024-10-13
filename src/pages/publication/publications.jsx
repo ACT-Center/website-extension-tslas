@@ -1,7 +1,8 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
 import "./publications.css"
 import { Client, Databases } from "appwrite";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
+import fi from "./imageMap";
 
 export default function Publications() {
     
@@ -14,6 +15,12 @@ export default function Publications() {
 
     const databases = new Databases(client);
 
+    function sorter(a, b){
+        var textA = a.Name.toUpperCase();
+        var textB = b.Name.toUpperCase();
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    }
+
     let teachers = useQuery({
         queryKey: ['Teachers'],
         queryFn: async function fetcher(){
@@ -24,11 +31,12 @@ export default function Publications() {
                 []
             )
 
+            promise.documents.sort(sorter);
             return promise
 
         },
         refetchOnMount: false,
-        refetchOnWindowFocus: false
+        refetchOnWindowFocus: false,
     })
 
 
@@ -60,9 +68,7 @@ function TeacherCard({id, name}) {
 
     return (
         <div className='teacherCard' onClick={clickHandler}>
-            <div className="teacherCardImg">
-
-            </div>
+            <img src={fi[id-1]} className="teacherCardImg" alt={id} />
             <p className="teacherCardName">{name}</p>
         </div>
     );
@@ -70,7 +76,7 @@ function TeacherCard({id, name}) {
 
 function Publication({ pub, index }) {
 
-    return (
+    return(
         <div className="pub">
             <h4>{pub.title}</h4>
             <p>By: {pub.authors.join(', ')}</p>
