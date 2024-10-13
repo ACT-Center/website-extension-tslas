@@ -35,7 +35,25 @@ export default function Teacherpubs() {
 
     })
 
-    if(publications.isLoading || publications.isFetching){
+
+    let confPapers = useQuery({
+        queryKey: ['confPapers', data.state.id],
+        queryFn: async () => {
+
+            let promise = await databases.listDocuments(
+                "6706e36200146facdec1",
+                "670b1f2c00079b6ce3b9",
+                [
+                    Query.equal('TeacherID', data.state.id)
+                ]
+            )
+
+            return promise
+
+        }
+    })
+
+    if(publications.isLoading || publications.isFetching || confPapers.isFetching || confPapers.isLoading){
         return(<></>)
     }
 
@@ -44,18 +62,19 @@ export default function Teacherpubs() {
 
             {/* <h1 className='teacherName'>{data.state.name}</h1> */}
 
-            <h3 className='teacherSubHead'>Research Papers</h3>
+            {publications.data.documents.length?<h3 className='teacherSubHead'>Research Papers</h3>:<></>}
             {
                 publications.data.documents.map((data, i) => (
                     <a href={data.Link?data.Link:""}><div className='teacherPaper'>{data.Paper}</div></a>
                 ))
             }
 
-            <h3 className='teacherSubHead'>Conference Papers</h3>
-
+            {confPapers.data.documents.length?<h3 className='teacherSubHead'>Conference Papers</h3>:<></>}
             {
-                publications.data.documents.map((data, i) => (
-                    <a href={data.Link?data.Link:""}><div className='teacherPaper'>{data.Paper}</div></a>
+                confPapers.data.documents.map((data, i) => (
+                    <>
+                    <div className='teacherPaper'>{data.Name} <br /> <span className='teacherPaperLoc'>{data.Location}</span></div>
+                    </>
                 ))
             }
 
