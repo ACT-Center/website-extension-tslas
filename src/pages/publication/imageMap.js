@@ -13,9 +13,11 @@ import RuchikaJain from "./FacultyImages/RuchikaJain.jpg"
 import SanthaKumari from "./FacultyImages/SanthaKumari.jpg"
 import SheenaChhabra from "./FacultyImages/SheenaChhabra.jpg"
 import SheikhAdilEdrisi from "./FacultyImages/SheikhAdilEdrisi.jpg"
+import AlessandroSaccal from "./FacultyImages/AlessandroSaccal.jpg"
+import JappenOberoi from "./FacultyImages/JappenOberoi.jpg"
 
 let fi = [
-    AarushiMahajan,
+    AlessandroSaccal,
     GurparkashSingh,
     AnupamGarg,
     AnujShukla,
@@ -29,7 +31,7 @@ let fi = [
     RabiPrakash,
     null,
     SheenaChhabra,
-    AarushiMahajan,
+    JappenOberoi,
     RichaNigam,
     KritiVyas,
     KazumaMizukoshi

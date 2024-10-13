@@ -69,7 +69,7 @@ function TeacherCard({id, name}) {
     return (
         <div className='teacherCard' onClick={clickHandler}>
             <img src={fi[id-1]} className="teacherCardImg" alt={id} />
-            <p className="teacherCardName">{name}</p>
+            <p className="teacherCardName">Dr. {name}</p>
         </div>
     );
 }
