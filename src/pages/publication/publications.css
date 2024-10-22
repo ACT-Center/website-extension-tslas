@@ -2,7 +2,8 @@
     font-size: 1.5em;
 
     /* padding: 20px 100px; */
-    width: 350px;
+    width: 20vw;
+    height: fit-content;
     cursor: pointer;
 
     display: flex;
@@ -10,7 +11,14 @@
     align-items: center;
     justify-content: center;
 
+    transition-duration: 200ms;
+
 }
+
+.teacherCard:hover{
+    filter: brightness(90%);
+}
+
 .publications{
 
     display: flex;
@@ -32,4 +40,25 @@
 .teacherCardName{
     padding: 20px 40px;
     text-align: center;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    .teacherCard{
+        width: 25vw;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .teacherCard{
+        width: 60vw;
+    }
+
+    .publications{
+        justify-content: center;
+    }
+
 }

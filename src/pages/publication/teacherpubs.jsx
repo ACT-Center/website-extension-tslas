@@ -50,11 +50,12 @@ export default function Teacherpubs() {
 
             return promise
 
-        }
+        },
+        refetchOnWindowFocus: false
     })
 
     if(publications.isLoading || publications.isFetching || confPapers.isFetching || confPapers.isLoading){
-        return(<></>)
+        return(<>Loading.......</>)
     }
 
     return (

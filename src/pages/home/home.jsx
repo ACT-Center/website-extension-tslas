@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="bg-gradient-to-r from-white to-neutral-400 select-none h-screen w-full flex flex-col">
-      <div className="bg-orange-500 h-auto">
-        {/* <Navbar /> */}
-      </div>
+      <Navbar />
       <div className=" w-full flex flex-1 justify-start items-end">
         <div className=" mb-10 p-4 min-[550px]:p-2 ml-10 max-[800px]:ml-5 backdrop-blur-sm bg-white/30 w-fit absolute flex max-[550px]:flex-col rounded-xl select-none items-center">
           

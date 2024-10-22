@@ -3,29 +3,22 @@ import { useOutletContext } from "react-router-dom";
 
 let conferenceDetailsList = [
     {
-        facultyName: "Andrea Raimondi (co-organiser)",
-        location: "Thapar",
-        date: "2021",
+        facultyName: "Andrea Raimondi",
+        location: "Thapar Institute of Engineering and Technology, Patiala",
+        date: "June, 2021",
         conferenceDetails: "Thought and Reality Workshop",
         website: ""
     },
     {
         facultyName: "Rabi Prakash",
         location: "India International Centre, New Delhi",
-        date: "Jun-24",
+        date: "June, 2024",
         conferenceDetails: "Towards an Alternative Paradigm for Bhakti: Examinations of Bhakti Texts towards its Contexts",
         website: ""
     },
     {
-        facultyName: "Dr. Vinay Kumar",
-        location: "TIET, Patiala",
-        date: "March 27-28, 2014",
-        conferenceDetails: "Exploring New Research Avenues: A Conversation among Heterodox Economics Sociology and History.",
-        website: ""
-    },
-    {
-        facultyName: "Jappen Oberoi",
-        location: "TIET, Patiala",
+        facultyName: "Jappen Oberoi & Rabi Prakash",
+        location: "Thapar Institute of Engineering and Technology, Patiala",
         date: "March 27-28, 2024",
         conferenceDetails: "Exploring New Research Avenues: A Conversation among Heterodox Economics Sociology and History.",
         website: "https://www.youtube.com/@JappenOberoi/streams"
@@ -56,9 +49,8 @@ function Publication({ pub }) {
     return (
         <div className="pub">
             <h4>{pub.facultyname}</h4>
-            <p>Location: {pub.location} , Date: {pub.date}</p>
+            <p>Location: {pub.location} <br /> Date: {pub.date}</p>
             <p>{pub.conference}</p>
-            {/* {pub.website && <a href={pub.website} target="_blank" rel="noopener noreferrer">Website</a>} */}
         </div>
     );
 }

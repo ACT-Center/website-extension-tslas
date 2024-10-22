@@ -122,7 +122,7 @@ let data = [
 for(let i = 0; i < data.length; i++){
     const promise = await databases.createDocument(
         '6706e36200146facdec1',
-        '670b1f2c00079b6ce3b9',
+        '6706ecb6003a5a280162',
         ID.unique(),
         {
             TeacherID: parseInt(data[i].TeacherID),
