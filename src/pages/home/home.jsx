@@ -14,7 +14,7 @@ const Home = () => {
             {/* Publications */}
           <div className="h-1/6 w-fit mr-2 ml-2 mt-3 mb-3">
             <Link to="/section/publications">
-              <Card title="PUBLICATIONS" url="https://www.ripublication.com/images/Journal-Banner.jpg" />
+              <Card title="PUBLICATIONS" url="https://www.rajeshpublications.com/images/about.png" />
             </Link>
           </div>
           
@@ -37,7 +37,7 @@ const Home = () => {
           {/* Talks */}
           <div className="h-1/6 w-fit mr-2 ml-2 mt-3 mb-3 ">
             <Link to="/section/talks">
-              <Card title="TALKS" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcyqDeHW9UA7HqhBLJ6YOECaWvHXLETBOoA&s" />
+              <Card title="TALKS" url="https://canny.io/blog/wp-content/smush-webp/2024/02/customer-interview.png.webp" />
             </Link>
           </div>
           </div>
