@@ -1,12 +1,12 @@
 .container {
     color: white;
-    position: relative;
+    /* position: relative; */
     font-family: sans-serif;
   }
 
-  .container .box{
-    width: 13.875em;
-    height: 15.875em;
+  .container  .box , .image{
+    width: 20vw;
+    height: 30vh;
     padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.222);
     border-radius: 0.7rem;
@@ -19,8 +19,21 @@
   }
 
   .container .box .title {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
     letter-spacing: 0.1em;
   }
   
+
+  @media screen and (max-width: 550px) {
+    .container  .box , .image{
+      height: 20vh;
+      width: 30vw;
+      padding: .5rem;
+    }
+
+    .container .box .title {
+      font-size: .7rem;
+    }
+    
+  }

@@ -1,0 +1,60 @@
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.menu {
+    display: flex;
+}
+
+.left.menu {
+    justify-content: flex-start;
+}
+
+.right.menu {
+    justify-content: flex-end;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+.header.item {
+    text-decoration: none;
+    color: #000;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    display: none; /* Add logic for dropdown on hover */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}

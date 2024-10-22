@@ -6,10 +6,9 @@ const Card = ({ url , title}) => {
     <div className="container" >
       <div className="image" style={{
         position : "absolute",
-        width: "13.875em",
-    height: "15.875em",
       backgroundImage: `url(${url})`, // Correct way to set the background image dynamically
-      backgroundSize: 'cover',        // Ensure the image covers the whole div
+      backgroundSize: 'cover',
+      backgroundRepeat : 'no-repeat',        // Ensure the image covers the whole div
       backgroundPosition: 'center',
       filter: 'brightness(0.5) opacity(0.6)', 
       zIndex : "-1",
