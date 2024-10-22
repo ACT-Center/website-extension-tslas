@@ -10,9 +10,13 @@
     padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.222);
     border-radius: 0.7rem;
-    transition: all ease 0.5s;
+    transition: all ease .75s;
   }
 
+  .container:hover , .box:hover {
+    scale: 1.05;
+    transition: all 0.5s;
+  }
 
   .container .box .title {
     font-size: 1.5rem;
