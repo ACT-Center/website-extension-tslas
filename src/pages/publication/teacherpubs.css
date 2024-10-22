@@ -23,6 +23,12 @@
     
 }
 
+.teacherPaperLoc{
+
+    color: grey;
+
+}
+
 .teacherPaper:hover{
     border-bottom: 5px rgb(255, 0, 76) solid;
 }
