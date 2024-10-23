@@ -15,6 +15,8 @@ import SheenaChhabra from "./FacultyImages/SheenaChhabra.jpg"
 import SheikhAdilEdrisi from "./FacultyImages/SheikhAdilEdrisi.jpg"
 import AlessandroSaccal from "./FacultyImages/AlessandroSaccal.jpg"
 import JappenOberoi from "./FacultyImages/JappenOberoi.jpg"
+import VinayKumar from "./FacultyImages/VinayKumar.jpg"
+import RahulUpadhyay from "./FacultyImages/RahulUpadhyay.jpeg"
 
 let fi = [
     AlessandroSaccal,
@@ -34,7 +36,9 @@ let fi = [
     JappenOberoi,
     RichaNigam,
     KritiVyas,
-    KazumaMizukoshi
+    KazumaMizukoshi,
+    VinayKumar,
+    RahulUpadhyay
 ]
 
 export default fi

@@ -6,118 +6,77 @@ const client = new Client()
 
 const databases = new Databases(client);
 
-let data = [
-    {
-      TeacherID: "2",
-      Name: "Enhancing Career Resilience through Psychosocial Support: Exploring the Influence of Mentoring, Networking, and Psychological Resources, (Track 4: Sustaining Resilient Quality Cultures in Higher Education)",
-      Location: "European Association for Institutional Research (EAIR) Forum, University College Cork, Ireland"
-    },
-    {
-      TeacherID: "2",
-      Name: "An Antecedent-Outcome model for Career Resilience, European Association for Institutional Research (EAIR) Forum",
-      Location: " University of Continuing Education, Krems, Austria"
-    },
-    {
-      TeacherID: "2",
-      Name: " Facets of Organizational Agility",
-      Location: "European Association for Institutional Research (EAIR) Forum, Austria"
-    },
-    {
-      TeacherID: "2",
-      Name: "Developing Inclusive Learning Environments at Management Education Institutions",
-      Location: " AOM 79th Annual Meeting of the Academy of Management, Boston, Massachusetts, U.S.A."
-    },
-    {
-      TeacherID: "2",
-      Name: "A Process-oriented framework for corporate social responsibility implementation",
-      Location: "8TH PRME, Asia Forum, Sustainable Futures, S P Jain Institute of Management and Research, Mumbai, India."
-    },
-    {
-      TeacherID: "2",
-      Name: "A developmental and constructivist approach for designing a course on sustainability.",
-      Location: "8TH PRME, Asia Forum, Sustainable Futures, S P Jain Institute of Management and Research, 12-14 December, Mumbai, India."
-    },
-    {
-      TeacherID: "2",
-      Name: "Getting Future Ready: Leadership Role to Address ‘Quality versus Access’ Debate in Management Education",
-      Location: "8TH PRME, Asia Forum, Sustainable Futures, S P Jain Institute of Management and Research, 12-14 December, Mumbai, India"
-    },
-    {
-      TeacherID: "2",
-      Name: " Achieving Quality in Higher Education Through Transformation: The Perfect Mélange of Inclusiveness and Excellence.",
-      Location: " 40th Annual European Association for Institutional Research (EAIR) Forum 2018: Competition, Collaboration & Complementarity in Higher Education, Central European University, Budapest, Hungary."
-    },
-    {
-      TeacherID: "2",
-      Name: " Understanding corporate social responsibility practice and implementation in the institutional environment, FORE International sustainable development conference 2018, New Delhi: FORE Business school & International Association for Business and Society.",
-      Location: ""
-    },
-    {
-      TeacherID: "2",
-      Name: "Understanding CSR as a practice: From obligation to opportunity, In 12th Corporate Responsibility Research Conference",
-      Location: "Istanbul, Turkey, Organised by University of Leeds – Istanbul University – Kedge Business School."
-    },
-    {
-      TeacherID: "3",
-      Name: "An Approach for Offline Handwritten Character Shape Reconstruction Using Active Contour and Morphological Techniques. Advanced Computing and Intelligent Technologies.",
-      Location: "Proceedings of ICACIT 2021. Springer Singapore"
-    },
-    {
-      TeacherID: "3",
-      Name: "DeepPose: A 2D Image Based Automated Framework for Human Pose Detection and a Trainer App Using Deep Learning, Proceedings of International Conference on Emergent Converging Technologies and Biomedical Systems.",
-      Location: "Singapore: Springer Nature Singapore, 2023."
-    },
-    {
-      TeacherID: "3",
-      Name: "An Automated Framework for the Segmentation of Skin Lesions Using Deep Learning. Proceedings of International Health Informatics.",
-      Location: "Conference (IHIC-2023), New Delhi, 17th – 18th October, 2023."
-    },
-    {
-      TeacherID: "4",
-      Name: "Modeling primacy, recency, and cued recall in serial memory task using on-center off-surround recurrent neural network.",
-      Location: "International Conference on Machine Learning, Optimization, and Data Science. Springer Nature Switzerland."
-    },
-    {
-      TeacherID: "4",
-      Name: "Relative Numerical Context Affects Temporal Processing. In Proceedings of the Annual Meeting of the Cognitive Science Society",
-      Location: ""
-    },
-    {
-      TeacherID: "5",
-      Name: "New Foundations of Dispositionalism, Synthese",
-      Location: ""
-    },
-    {
-      TeacherID: "8",
-      Name: "Role of Psychological Factors and Behavioral \nBiases on investment Decision Making: A Mediation Analysis.",
-      Location: "Proceedings of the GAW Finance and Economics Conference"
-    },
-    {
-      TeacherID: "8",
-      Name: "Biases on investment Decision Making: A Mediation Analysis. Proceedings of the GAW Finance and Economics Conference",
-      Location: ""
-    },
-    {
-      TeacherID: "18",
-      Name: "For Whom Insurgent Parties Stand and Act in Elections?\nRebel-Based Parties and the Effective Number of the Electorate",
-      Location: "Annual International Congress of the Latin American Studies Association, Bogotá (Colombia)"
-    },
-    {
-      TeacherID: "11",
-      Name: "Abstract Submitted and Poster Presented: A Novel Brain-Function Based Design of Curriculum and Pedagogy (Brainaculum) A New Educational Approach of 21st Century",
-      Location: ""
-    },
-    {
-      TeacherID: "15",
-      Name: "“Money Talks: Writing and Rewriting History from Coins” in the International Conference titled Exploring New Research Avenues: A Conversation among Heterodox Economics.",
-      Location: "Sociology and History on the 27th and 28th of March, 2024 in TSLAS, TIET"
-    },
-    {
-      TeacherID: "16",
-      Name: "Exploring Deep Encoding Dynamics: The Impact of Gender Congruent, Incongruent, and Neutral Advertisements on Consumer Memory and Purchase Intentions",
-      Location: " Marketing Conference III (iMarC III) Marketing Transformations: Reimagine, Realign and Rework"
-    }
-  ]
+const data = [
+  {
+    Paper: "A Hybrid Deep Learning Framework Using Scaling?Basis Chirplet Transform for Motor Imagery EEG Recognition in Brain–Computer Interface Applications, International Journal of Imaging Systems and Technology 34 (4), e23127, 2024"
+  },
+  {
+    Paper: "A hybrid ensemble voting-based residual attention network for motor imagery EEG Classification, Analog Integrated Circuits and Signal Processing 119 (1), 165-184, 2024"
+  },
+  {
+    Paper: "A low-profile flower-shaped MIMO antenna for wireless applications, International Journal of Electronics, 1-25, 2023"
+  },
+  {
+    Paper: "E?CNNet: Time?reassigned Multisynchrosqueezing transform?based deep learning framework for MI?BCI task classification, International Journal of Imaging Systems and Technology 33 (4), 1406-1423, 2023"
+  },
+  {
+    Paper: "Design of a compact quasi-self-complementary UWB-MIMO antenna with dual band-notched characteristics for wireless communication applications, International Journal of Electronics 110 (5), 804-828, 2023"
+  },
+  {
+    Paper: "Multivariate variational mode decomposition & phase space reconstruction based motor imagery EEG classification, Computers and Electrical Engineering 108, 108737, 2023"
+  },
+  {
+    Paper: "How Visual Stimuli Evoked P300 is Transforming the Brain–Computer Interface Landscape: A PRISMA Compliant Systematic Review, IEEE Transactions on Neural Systems and Rehabilitation Engineering 31, 1429-1439, 2023"
+  },
+  {
+    Paper: "Schizo-Net: A novel Schizophrenia Diagnosis Framework Using Late Fusion Multimodal Deep Learning on Electroencephalogram-Based Brain Connectivity Indices, IEEE Transactions on Neural Systems and Rehabilitation Engineering 31, 464-473, 2023"
+  },
+  {
+    Paper: "Design and analysis of planar four-port UWB-MIMO antenna with band-rejection capability, International Journal of Microwave and Wireless Technologies, 1-13, 2023"
+  },
+  {
+    Paper: "Electroencephalogram Data Collection for Student Engagement Analysis with Audio-Visual Content, bioRxiv, 2022.09. 20.508656, 2022"
+  },
+  {
+    Paper: "Design and analysis of compact quad-element MIMO antenna with asymmetrical ground structures for ultra-wideband communication, Wireless Personal Communications 124 (4), 3105-3127, 2022"
+  },
+  {
+    Paper: "A compact dual-polarized co-radiator MIMO antenna for UWB applications, International Journal of Microwave and Wireless Technologies 14 (2), 225-238, 2022"
+  },
+  {
+    Paper: "Deep-precognitive diagnosis: Preventing future pandemics by novel disease detection with biologically-inspired conv-fuzzy network, M XuIeee Access 10, 23167-23185, 2022"
+  },
+  {
+    Paper: "Bi-LSTM-deep CNN for schizophrenia detection using MSST-spectral images of EEG signals, L LongoElsevier, 2022"
+  },
+  {
+    Paper: "A novel EEG channel selection and classification methodology for multi?class motor imagery?based BCI system design, International Journal of Imaging Systems and Technology, 2022"
+  },
+  {
+    Paper: "From Convolutions towards Spikes: The Environmental Metric that the Community currently Misses, NeurIPS 2021 AI for Science Workshop, 2021"
+  },
+  {
+    Paper: "Scalp EEG Classification Using TQWT-Entropy Features for Epileptic Seizure Detection, Brain and Behavior Computing, 221-241, 2021"
+  },
+  {
+    Paper: "Development of an adaptive neuro fuzzy inference system based vehicular traffic noise prediction model, Journal of Ambient Intelligence and Humanized Computing 12, 2685-2701, 2021"
+  },
+  {
+    Paper: "Reflection and data based adaptive teaching strategy for student centric learning, Academia Letters, 2, 2021"
+  },
+  {
+    Paper: "Hybrid time?reassigned multisynchrosqueezing transform?Picard?based automated electroencephalography artifact correction methodology for brain–computer interface applications, International Journal of Imaging Systems and Technology, 2021"
+  },
+  {
+    Paper: "Novel fuzzy approach to Antimicrobial Peptide Activity Prediction: A tale of limited and imbalanced data that models won’t hear, NeurIPS 2021 AI for Science Workshop, 2021"
+  },
+  {
+    Paper: "A novel machine learning?based analytical framework for automatic detection of COVID?19 using chest X?ray images, International Journal of Imaging Systems and Technology, 2021"
+  },
+  {
+    Paper: "Design and experimental verification of compact dual?element quasi?self?complementary ultra?wideband multiple?input multiple?output antenna for wireless applications, Microwave and Optical Technology Letters, 2021"
+  },
+]
 
 for(let i = 0; i < data.length; i++){
     const promise = await databases.createDocument(
@@ -125,9 +84,8 @@ for(let i = 0; i < data.length; i++){
         '6706ecb6003a5a280162',
         ID.unique(),
         {
-            TeacherID: parseInt(data[i].TeacherID),
-            Name: data[i].Name.trim(),
-            Location: data[i].Location?.trim()
+            TeacherID: 20,
+            Paper: data[i].Paper.trim(),
         }
     );
 }
