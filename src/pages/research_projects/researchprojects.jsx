@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
 
 let names = [
-    'Dr. Vinay Kumar',
+    'Dr. Manoj Baranwal, Dr. Vinay Kumar, Dr. Sara Chandy, Dr. Rohitha S Chandra, Dr. Rahul Upadhyay, Dr. Priyankar Dey, Dr. Debajyoti Dutta, Ms. Neha Kaushal',
     "Prof. Santha Kumari",
     "Prof. Santha Kumari",
     "Dr. Sheikh Adil Edrisi",
@@ -12,7 +12,7 @@ let names = [
 ];
 
 let projects = [
-    "Research Data for Wesbite 100% B11 Identification of immunogenic peptide for diagnosis of orthohantavirus infection Identification of immunogenic peptide for diagnosis of orthohantavirus infection",
+    "Identification of immunogenic peptide for diagnosis of orthohantavirus infection Identification of immunogenic peptide for diagnosis of orthohantavirus infection",
     "An experimental Investigation of the Psychological determinants of Financial decision making: A prospect theory approach",
     "Factors influencing resilience in children: The mediating role of protective and compensatory factors in coping with adversities.",
     "Sustainability assessment of urban forestry by managing urban marginal lands for developing green space",

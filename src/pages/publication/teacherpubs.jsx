@@ -8,7 +8,7 @@ export default function Teacherpubs() {
 
     let data = useLocation();
     let [setTitle, setDesc] = useOutletContext();
-    setTitle(data.state.name)
+    setTitle("Dr. " + data.state.name)
 
     const client = new Client()
         .setEndpoint("https://cloud.appwrite.io/v1")

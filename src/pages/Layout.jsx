@@ -13,7 +13,7 @@ export default function Layout() {
     <div className="layout">
 
         <div className="layoutTitle">
-          <h1> {title} </h1> 
+          <h1> {title=='ZZZZZZZZZZZZZZZZ'?'Others':title} </h1> 
         </div>
 
         <div className="content">
